@@ -7,24 +7,24 @@ import matplotlib.pyplot as plt
 import io
 import base64
 from datetime import timedelta, datetime
+import os
+import json
+import os
+from firebase_admin import credentials, firestore, initialize_app
+
 
 #creates a Flask application instance and assigns it to the variable 'app'. This instance will be used to define routes and handle requests in the web application.
 app = Flask(__name__)
 # for session
-
-app.secret_key='AmiG2003'
+app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'fallback-secret')
 app.permanent_session_lifetime = timedelta(minutes=10)
 
-
-# USER_CREDENTIALS = {
-#     'admin': 'password123'
-# } #hardcoded
-
 #loads the service account key JSON file and initializes the Firebase Admin SDK with the provided credentials. This allows the application to interact with Firebase services, such as Firestore.
-cred = credentials.Certificate("cloudexpensetracker.json")
+cred_dict = json.loads(os.environ['FIREBASE_KEY'])
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
-            
+
 # for login page
 def login_required(f):
     @wraps(f)
