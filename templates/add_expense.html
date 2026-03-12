@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>PocketTracker</h2>
+    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a href="{{ url_for('add_expense') }}">Add Expense</a>
+</div>
+
+<div class="main-content">
+
+    <div class="card-box">
+        <h4 class="mb-4">Add New Expense</h4>
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <label class="form-label">Expense Name</label>
+                <input type="text" class="form-control dark-input" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Amount</label>
+                <input type="number" step="0.01" class="form-control dark-input" name="amount" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Category</label>
+                <select class="form-control dark-input" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Utilities">Utilities</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control dark-input" name="date" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Expense</button>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Cancel</a>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

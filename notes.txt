@@ -1,0 +1,3 @@
+//firebase_admin - The official Firebase Admin SDK for Python, which allows you to interact with Firebase services from a server environment.
+//credentials - authentication credentials for Firebase Admin SDK, used to authenticate your application with Firebase services.
+//firestore - functions to read and write data to Firestore, a NoSQL document database provided by Firebase.
