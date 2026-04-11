@@ -16,7 +16,7 @@
 
 <!-- MAIN CONTENT -->
 <div class="main-content">
-
+<button class="btn btn-primary d-md-none mb-3" onclick="toggleMenu()">☰ Menu</button>
     <div class="card-box">
         <h4 class="mb-4">Edit Expense</h4>
 
@@ -60,6 +60,12 @@
     </div>
 
 </div>
-
+<script>
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display =
+        sidebar.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 </body>
 </html>

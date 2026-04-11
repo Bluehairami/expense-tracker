@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <button class="btn btn-primary d-md-none mb-3" onclick="toggleMenu()">☰ Menu</button>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Tracker</title>
@@ -18,7 +19,7 @@
 
 <!-- MAIN -->
 <div class="main-content container-fluid">
-    
+
     <h2 class="mb-4">Dashboard Overview</h2>
     <p>Welcome, {{ session.username }}</p>
 
@@ -94,6 +95,12 @@
         </table>
     </div>
 </div>
-
+<script>
+function toggleMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display =
+        sidebar.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 </body>
 </html>

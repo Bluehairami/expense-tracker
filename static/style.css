@@ -172,3 +172,86 @@ body {
         padding: 15px;
     }
 }
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 15px;
+        width: 100%;
+    }
+}
+/* Fix card width */
+.card-box {
+    width: 100%;
+}
+
+/* Fix sidebar layering */
+.sidebar {
+    z-index: 1000;
+}
