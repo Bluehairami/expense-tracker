@@ -17,29 +17,29 @@
 </div>
 
 <!-- MAIN -->
-<div class="main-content">
-
+<div class="main-content container-fluid">
+    
     <h2 class="mb-4">Dashboard Overview</h2>
     <p>Welcome, {{ session.username }}</p>
 
     <!-- TOP CARDS -->
     <div class="row">
-        <div class="col-md-4">
-            <div class="card-box">
+<div class="col-12 col-md-4">
+                <div class="card-box">
                 <h5>Total Expenses</h5>
                 <h2 class="expense">$ {{ total }}</h2>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card-box">
+<div class="col-12 col-md-4">   
+                <div class="card-box">
                 <h5>Categories</h5>
                 <h2 class="income">{{ category_totals|length }}</h2>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card-box">
+<div class="col-12 col-md-4">
+                <div class="card-box">
                 <h5>Total Records</h5>
                 <h2 class="balance">{{ expenses|length }}</h2>
             </div>
@@ -53,7 +53,7 @@
     </div>
 
     <!-- TABLE -->
-    <div class="chart-box">
+    <div class="chart-box ">
         <h5 class="mb-3">Recent Transactions</h5>
         <form method="GET">
             <div class="mb-3">
@@ -64,7 +64,7 @@
             <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Reset</a>
         </form>
     </div>
-    <div class="chart-box">
+    <div class="chart-box table-responsive">
         <table class="table">
             <thead>
                 <tr>
